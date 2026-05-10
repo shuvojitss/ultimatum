@@ -14,12 +14,20 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: flask-k8s-demo:latest
+        image: flask-app:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
-        resources:
-          requests:
-            cpu: "100m"
-          limits:
-            cpu: "200m"
+
+        env:
+        - name: APP_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: flask-config
+              key: APP_NAME
+
+        - name: WELCOME_MSG
+          valueFrom:
+            configMapKeyRef:
+              name: flask-config
+              key: WELCOME_MSG
