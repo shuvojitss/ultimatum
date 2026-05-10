@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flash Sale Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 60px;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            width: 420px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .product {
+            border: 1px solid #ddd;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function buyNow() {
+            alert('Order placed successfully!');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>🛒 Flash Sale Store</h1>
+            <p>Served from pod: <strong>{{ pod_name }}</strong></p>
+
+            <div class="product">
+                <h3>Wireless Microphones</h3>
+                <p>Price: $500</p>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <h3>Gaming Mouse</h3>
+                <p>Price: $50</p>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
